@@ -1,4 +1,22 @@
 {
   "name": "md-links",
-  "version": "0.1.0"
+  "version": "1.0.0",
+  "description": "## Índice",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "hello()"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luana-aredes/SAP004-md-links.git"
+  },
+  "author": "“luana_aredes” <“luanaredes@hotmail.com”>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luana-aredes/SAP004-md-links/issues"
+  },
+  "homepage": "https://github.com/luana-aredes/SAP004-md-links#readme"
 }

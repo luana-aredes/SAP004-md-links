@@ -8,7 +8,6 @@ console.log(path)
 mdLinks(path, option)
   .then(links => {
     if (option === '--validate') {
-      //program.validate
       links.forEach(item => {
         console.log(`${item.href}  ${item.statusText} ${item.status} ${item.text}`);
       })

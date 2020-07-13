@@ -24,10 +24,7 @@
   },
   "homepage": "https://github.com/luana-aredes/SAP004-md-links#readme",
   "dependencies": {
-    "command-line-args": "^5.1.1",
-    "commander": "^5.1.0",
     "fs": "0.0.1-security",
-    "glob": "^7.1.6",
     "node-fetch": "^2.6.0",
     "path": "^0.12.7"
   }

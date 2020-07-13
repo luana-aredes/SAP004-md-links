@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "hello()",
-    "start": "nodemon mdLinks.js"
+    "start": "mdLinks.js"
   },
   "bin": {
     "md-links": "cli.js"

@@ -1,7 +1,7 @@
 const fs = require('fs');
 var file = process.argv.slice(2);
 
-const mdLinks = (file, validate) => {
+const mdLinks = (file) => {
   return new Promise((resolved, rejected) => {
     fs.readFile(file, 'utf8', function (err, data) {
       if (err) {
@@ -34,5 +34,5 @@ const mdLinks = (file, validate) => {
 }
 
 
-//mdLinks(file[0])
+mdLinks(file[0])
 module.exports = mdLinks;

@@ -30,7 +30,7 @@ Durante o bootcamp da Laboratória, foi proposto criar uma ferramenta, usando [N
 
 - O módulo é instalável executando o seguinte comando no terminal:
 
-  `npm install -g luana-aredes/md-links`.
+  `npm install -g luana-aredes/SAP004-md-links`.
 
 ## 4. Como utilizar
 

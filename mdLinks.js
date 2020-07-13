@@ -1,7 +1,7 @@
 const fs = require('fs');
-var file = process.argv.slice(2);
+//var file = process.argv.slice(2);
 
-const mdLinks = (file) => {
+const mdLinks = (file, validate) => {
   return new Promise((resolved, rejected) => {
     fs.readFile(file, 'utf8', function (err, data) {
       if (err) {
@@ -23,9 +23,8 @@ const mdLinks = (file) => {
           filesObj['href'] = arrFileFinal;
           filesObj['text'] = arrTextFinal;
           filesObj['file'] = file;
-          const result = `${file}  ${arrFileFinal}  ${arrTextFinal}`
-          //console.log(result)
-          return result;
+          console.log(filesObj)
+          return filesObj;
         })
         resolved(fileInformation);
       }
@@ -33,7 +32,7 @@ const mdLinks = (file) => {
     });
   })
 }
-mdLinks(file[0])
-//console.log(mdLinks(file[0]))
-//console.log(fileInformation)
-module.exports = mdLinks(file[0]);
+
+
+//mdLinks(file[0])
+module.exports = mdLinks;

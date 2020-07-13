@@ -1,5 +1,5 @@
 const fs = require('fs');
-//var file = process.argv.slice(2);
+var file = process.argv.slice(2);
 
 const mdLinks = (file, validate) => {
   return new Promise((resolved, rejected) => {

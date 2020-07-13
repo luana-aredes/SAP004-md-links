@@ -1,36 +1,35 @@
 const axios = require("axios");
-const fileInformation = require('./mdLinks');
+const mdLinks = require('./mdLinks');
 var file = process.argv.slice(2);
-console.log(fileInformation(file[0]))
+//const link = mdLinks(file[0])
 
-const status = (fileInformation) => {
+
+
+
+const validate = (links) => {
   return new Promise((resolved, rejected) => {
-    if (fileInformation == false) {
-      rejected(fileInformation);
+    if (mdLinks == undefined) {
+      rejected(false);
     } else {
-
-      const arrLinks = fileInformation.map(item => {
-        const result = item.substring(item.indexOf("  ") + 1);
-        const link = result.slice(0, result.indexOf("  "));
-
-        return link;
-      });
-
-      const statusResult = arrLinks.forEach(link => {
-        console.log(link)
-        axios.get(link).then(function (data) {
+      const resultValid = links.map(link => {
+        axios.get(link.href).then(function (data) {
           const status = {};
-          status['href'] = link;
+          status['href'] = link.href;
           status['statusText'] = data.statusText;
           status['status'] = data.status;
-          console.log(`${link}  ${data.statusText} ${data.status}`);
-          return status
+          const statusResult = `${link.href}  ${data.statusText} ${data.status} ${link.text}`
+          console.log(statusResult);
+          return statusResult;
         })
       })
+      resolved(resultValid);
     }
-    resolved(statusResult);
+
+
   })
 
 }
-console.log(status(fileInformation(file[0])))
-module.exports = status
+
+//status(mdLinks(file[0]))
+//console.log(status(mdLinks(file[0])))
+module.exports = validate

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const mdLinks = require('./mdLinks');
+const validate = require('./validate');
 const axios = require("axios");
 const {
   program
@@ -22,25 +23,38 @@ if (program.validate !== true) {
   }).catch(console.log('erroooo'));
 }
 
+
 if (program.validate) {
   mdLinks(file[0], {
     validate: true
   }).then(links => {
-    //console.log(links)
+    console.log(validate(links))
+  }).catch(console.log('Erro'))
+}
+
+
+/*
+
+
+if (program.validate) {
+  mdLinks(file[0], {
+    validate: true
+  }).then(links => {
+    console.log(links)
     links.map(link => {
       axios.get(link.href).then(function (data) {
         const status = {};
         status['href'] = link.href;
         status['statusText'] = data.statusText;
         status['status'] = data.status;
-        console.log(`${link.href}  ${data.statusText} ${data.status} ${link.text}`);
+       // console.log(`${link.href}  ${data.statusText} ${data.status} ${link.text}`);
       })
     }).catch(console.log('erro'));
   });
 }
 
 
-/*
+
 if (program.stats) {
   console.log('oiii');
 }

@@ -1,14 +1,14 @@
 {
-  "name": "md-links-luana",
+  "name": "luana-aredes/md-links",
   "version": "1.0.0",
   "description": "## Índice",
-  "main": "mdLinks.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "hello()",
-    "start": "mdLinks.js"
+    "start": "nodemon index.js"
   },
   "bin": {
     "md-links": "cli.js"
@@ -18,18 +18,17 @@
     "url": "git+https://github.com/luana-aredes/SAP004-md-links.git"
   },
   "author": "“Luana Aredes” <“luanaredes@hotmail.com”>",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/luana-aredes/SAP004-md-links/issues"
   },
   "homepage": "https://github.com/luana-aredes/SAP004-md-links#readme",
   "dependencies": {
-    "axios": "^0.19.2",
     "command-line-args": "^5.1.1",
     "commander": "^5.1.0",
-    "express": "^4.17.1",
     "fs": "0.0.1-security",
-    "path": "^0.12.7",
-    "yargs": "^15.4.1"
+    "glob": "^7.1.6",
+    "node-fetch": "^2.6.0",
+    "path": "^0.12.7"
   }
 }

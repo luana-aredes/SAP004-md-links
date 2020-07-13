@@ -2,7 +2,7 @@
   "name": "md-links-luana",
   "version": "1.0.0",
   "description": "## Índice",
-  "main": "index.js",
+  "main": "mdLinks.js",
   "directories": {
     "test": "test"
   },
